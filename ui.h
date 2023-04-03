@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
 using namespace std;
 
-class Student {
+class Student
+{
 private:
 	string name;
 	string surname;
