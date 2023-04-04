@@ -3,9 +3,7 @@
 
 using namespace std;
 
-void studentList::addStudent(Student id) {
+void StudentList::addStudent(Student id) {
 	
 	studentList.push_back(id);
 }
-
-//Student studentList::getStudentByIndex(int index) {}

@@ -1,15 +1,14 @@
 #include <iostream>
-#include <vector>
 #include <string>
 #include "person.h"
 
 using namespace std;
 
-class Student : private Person
+class Employee : private Person
 {
 private:
-	int index;
-
+	int idCard;
+	string position;
 public:
 	void setName(string name);
 	string getName();
@@ -17,13 +16,13 @@ public:
 	void setSurname(string surname);
 	string getSurname();
 
-	void setIndex(int index);
-	int getIndex();
-
 	void setPesel(string pesel);
 	string getPesel();
 
 	void setAge(string pesel);
 	int getAge();
+
+	void setIdCard(int idCard);
+	int getIdCard();
 };
 

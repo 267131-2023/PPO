@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class studentList
+class StudentList
 {
 private:
 	vector<Student> studentList;
@@ -12,8 +12,5 @@ private:
 public:
 	void addStudent(Student id);
 
-	Student getStudentByIndex(int index);
-
-	Student getStudentByPesel(string pesel);
 };
 
