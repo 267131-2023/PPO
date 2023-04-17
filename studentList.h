@@ -1,6 +1,7 @@
+#pragma once
 #include <iostream>
 #include <vector>
-#include "ui.h"
+#include "student.h"
 
 using namespace std;
 
@@ -11,6 +12,4 @@ private:
 
 public:
 	void addStudent(Student id);
-
 };
-

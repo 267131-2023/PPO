@@ -1,21 +1,23 @@
 ﻿#include <iostream>
 #include <windows.h>
+#include "studentList.h"
+#include "student.h"
 #include "ui.h"
-#include "studentList.h" 
-#include "employee.h"
 #include <string>
+
 
 using namespace std;
 
-//studentList sL1;
+StudentList sl1;
 
 int main()
 {
-	Student id;
-	id.setName("Maciek");
-	id.setIndex(256712);
-	cout << id.getName() << endl;
-	cout << id.getIndex();
 
+	ui();
+	Student s1;
+	s1.setName("Marek");
+	s1.setIndex(2137);
+	cout << s1.getName() << endl;
+	cout << s1.getIndex();
 
 }

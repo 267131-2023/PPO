@@ -1,71 +1,64 @@
+#pragma once
 #include <iostream>
 #include "ui.h"
+#include "person.h"
 #include <string>
-#include <ctime>
-#include <windows.h>
+#include <vector>
 
 using namespace std;
 
-void Student::setName(string name) {
-	this->name = name;
+void ui() {
+
+	while (1) {
+		cout << "=====-_Menu_-=====" << endl;
+		cout << "1. Dodaj student" << endl;
+		cout << "2. Usuñ student" << endl;
+		cout << "3. Lista studentow" << endl;
+		int choice;
+		cin >> choice;
+
+		menuChoice(choice);
+	}
 }
 
-string Student::getName() {
-	return this->name;
-}
+void menuChoice(int choice) {
 
-void Student::setSurname(string surname) {
-	this->surname = surname;
-}
-
-string Student::getSurname() {
-	return this->surname;
-}
-
-void Student::setIndex(int index) {
-	this->index = index;
-}
-
-int Student::getIndex() {
-	return this->index;
-}
-
-void Student::setPesel(string pesel) {
-	if (pesel.length() == 11) {
-		for (int i = 0; i < 11; i++) {
-			if (pesel[i] >= '0' && pesel[i] <= '9') {
-				this->pesel = pesel;
+	switch (choice) 
+	{
+		case: 1 :
+		{
+			Student s1;
+			string x;
+			cout << "Podaj imie: ";
+			cin >> x;
+			s1.setName(x);
+			cout << "Podaj nazwisko: ";
+			cin >> x;
+			s1.setSurname(x);
+			cout << "Podaj pesel: ";
+			cin >> x;
+			s1.setPesel(x);
+			cout << "Podaj indeks: ";
+			cin >> x;
+			s1.setIndex(x);
+		}
+		case: 2 :
+		{
+			cout << "1. Znajdz po numerze indeksu" << endl;
+			cout << "2. Znajdz po numerze pesele" << endl;
+			cin << choice;
+			switch (choice)
+			{
+			case 1: {
+				cout << "podaj indeks, aby wyszukac:  ";
+				int index;
+				cin >> index;
+				Stud
 			}
-			else {
-				cout << "Bledny pesel" << endl;
 			}
 		}
 	}
-	else {
-		cout << "Bledny pesel" << endl;
-	}
+	
+	
 
-}
-
-string Student::getPesel() {
-	return this->pesel;
-}
-
-void Student::setAge(string pesel) {
-	SYSTEMTIME st;
-	GetSystemTime(&st);
-	if (pesel[2] >= '2') {
-		this->age = st.wYear - (2000 + stoi(pesel.substr(0, 2)));
-		cout << this->age;
-		cout << "if";
-	}
-	else {
-		this->age = st.wYear - (1900 + stoi(pesel.substr(0, 2)));
-		cout << this->age;
-		cout << "else";
-	}
-}
-
-int Student::getAge() {
-	return this->age;
 }
