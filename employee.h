@@ -1,28 +1,25 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include "person.h"
+#include "interface.h"
 
 using namespace std;
 
-class Employee : private Person
+class Employee : public Person, public Interface
 {
 private:
+
 	int idCard;
 	string position;
+	string type = "Employee";
+
 public:
-	void setName(string name);
-	string getName();
-
-	void setSurname(string surname);
-	string getSurname();
-
-	void setPesel(string pesel);
-	string getPesel();
-
-	void setAge(string pesel);
-	int getAge();
 
 	void setIdCard(int idCard);
 	int getIdCard();
+
+	void setPosition(string position);
+	string getPosition();
 };
 

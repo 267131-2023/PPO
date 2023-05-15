@@ -1,16 +1,18 @@
 #include <iostream>
 #include <string>
+#include "interface.h"
 
 using namespace std;
 
 
-class Person
+class Person : public Interface
 {
-public:
 	string name;
 	string surname;
 	string pesel;
 	int age;
+
+public:
 	void setName(string name);
 	string getName();
 
@@ -22,6 +24,7 @@ public:
 
 	void setAge(string pesel);
 	int getAge();
+
 
 };
 

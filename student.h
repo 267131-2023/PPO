@@ -2,29 +2,19 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "person.h"
+#include "interface.h"
+
 using namespace std;
 
-class Student {
+class Student :public Person, public Interface
+{
 private:
-	string name;
-	string surname;
+	string type = "student";
 	int index;
-	string pesel;
-	int age;
 
 public:
-	void setName(string name);
-	string getName();
-
-	void setSurname(string surname);
-	string getSurname();
 
 	void setIndex(int index);
 	int getIndex();
-
-	void setPesel(string pesel);
-	string getPesel();
-
-	void setAge(string pesel);
-	int getAge();
 };
