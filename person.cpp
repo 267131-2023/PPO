@@ -1,5 +1,5 @@
-#include <iostream>
 #include "person.h"
+#include <iostream>
 #include <string>
 #include <ctime>
 #include <windows.h>
@@ -44,17 +44,25 @@ void Person::setAge(string pesel) {
 }
 
 string Person::getName() {
-	return this->name;
+	return name;
 }
 
 string Person::getSurname() {
-	return this->surname;
+	return surname;
 }
 
 string Person::getPesel() {
-	return this->pesel;
+	return pesel;
 }
 
 int Person::getAge() {
-	return this->age;
+	return age;
+}
+
+string Person::getType() {
+	return type;
+}
+
+int Person::getId() {
+	return id;
 }

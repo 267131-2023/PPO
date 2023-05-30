@@ -2,24 +2,26 @@
 #include <iostream>
 #include <string>
 #include "person.h"
-#include "interface.h"
 
 using namespace std;
 
-class Employee : public Person, public Interface
+class Employee : public Person
 {
-private:
-
-	int idCard;
+	int cardNumber;
+	int id = cardNumber;
+	string type = "employee";
 	string position;
-	string type = "Employee";
-
+	
 public:
 
-	void setIdCard(int idCard);
-	int getIdCard();
+	void setCardNumber(int cardNumber);
+	int getCardNumber();
 
 	void setPosition(string position);
 	string getPosition();
+
+	string getType();
+	int getId();
+
 };
 

@@ -1,20 +1,22 @@
 #pragma once
 #include <iostream>
-#include <vector>
 #include <string>
 #include "person.h"
-#include "interface.h"
 
 using namespace std;
 
-class Student :public Person, public Interface
+class Student : public Person
 {
-private:
-	string type = "student";
 	int index;
-
+	int id = index;
+	string type = "student";
+	
 public:
 
 	void setIndex(int index);
 	int getIndex();
+
+	string getType();
+	int getId();
 };
+

@@ -4,23 +4,26 @@
 
 using namespace std;
 
-int Employee::setIdCard(int idCard) {
-	this->idCard = idCard;
+void Employee::setCardNumber(int cardNumber) {
+	this->cardNumber = cardNumber;
 }
 
-void Employee::getIdCard() {
-	return this->idCard;
-}
-string Employee::setPosition(string position) {
+void Employee::setPosition(string position) {
 	this->position = position;
-}
-void Employee::getPosition() {
-	return this->position;
 }
 
 string Employee::getType() {
-	return this->type;
+	return type;
 }
-string Employee::getId() {
-	return this->idCard;
+
+int Employee::getCardNumber() {
+	return cardNumber;
+}
+
+string Employee::getPosition() {
+	return position;
+}
+
+int Employee::getId() {
+	return id;
 }

@@ -1,64 +1,90 @@
-#pragma once
-#include <iostream>
 #include "ui.h"
+#include "student.h"
 #include "person.h"
-#include <string>
-#include <vector>
+#include "list.h"
+#include <iostream>
+#include <stdio.h>
+#include <cstdlib>
+#include <conio.h>
 
 using namespace std;
 
 void ui() {
+	List List;
+	int choice;
+	string x;
+	int y;
 
-	while (1) {
-		cout << "=====-_Menu_-=====" << endl;
-		cout << "1. Dodaj student" << endl;
-		cout << "2. Usuñ student" << endl;
-		cout << "3. Lista studentow" << endl;
-		int choice;
+	while (true) {
+		cout << "MENU" << endl;
+		cout << "1.Dodaj studenta" << endl;
+		cout << "2.Dodaj pracownika" << endl;
+		cout << "3.Wyswietl liste studentow" << endl;
+		cout << "4.Wyswietl liste pracownikow" << endl;
+		cout << "5.Zakoncz" << endl;
+		cout << endl;
 		cin >> choice;
 
-		menuChoice(choice);
-	}
-}
 
-void menuChoice(int choice) {
-
-	switch (choice) 
-	{
-		case: 1 :
+		switch (choice) 
 		{
-			Student s1;
-			string x;
+		case 1:
+		{
+			Student s;
 			cout << "Podaj imie: ";
 			cin >> x;
-			s1.setName(x);
+			s.setName(x);
 			cout << "Podaj nazwisko: ";
 			cin >> x;
-			s1.setSurname(x);
+			s.setSurname(x);
 			cout << "Podaj pesel: ";
 			cin >> x;
-			s1.setPesel(x);
-			cout << "Podaj indeks: ";
-			cin >> x;
-			s1.setIndex(x);
+			s.setPesel(x);	
+			cout << "Podaj index: ";
+			cin >> y;
+			s.setIndex(y);
+			List.addStudent(s);
 		}
-		case: 2 :
+		break;
+		case 2:
 		{
-			cout << "1. Znajdz po numerze indeksu" << endl;
-			cout << "2. Znajdz po numerze pesele" << endl;
-			cin << choice;
-			switch (choice)
-			{
-			case 1: {
-				cout << "podaj indeks, aby wyszukac:  ";
-				int index;
-				cin >> index;
-				Stud
-			}
-			}
+			Employee w;
+			cout << "Podaj imie: ";
+			cin >> x;
+			w.setName(x);
+			cout << "Podaj nazwisko: ";
+			cin >> x;
+			w.setSurname(x);
+			cout << "Podaj pesel: ";
+			cin >> x;
+			w.setPesel(x);
+			cout << "Podaj stanowisko: ";
+			cin >> x;
+			w.setPosition(x);
+			cout << "Podaj numer karty: ";
+			cin >> y;
+			w.setCardNumber(y);
 		}
-	}
-	
-	
+			
+		break;
+		case 3:
+		{
+			List.displayStudent();
+		}
+			
+		break;
+		case 4:
+		{
+			List.displayEmployee();
+		}
+			
+		break;
+		case 5:
+			exit(0);
+		break;
 
+	
+		}
+		
+	}
 }

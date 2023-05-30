@@ -1,8 +1,7 @@
 #include <iostream>
 #include "student.h"
 #include <string>
-#include <ctime>
-#include <windows.h>
+
 
 using namespace std;
 
@@ -11,13 +10,13 @@ void Student::setIndex(int index) {
 }
 
 int Student::getIndex() {
-	return this->index;
+	return index;
 }
 
 string Student::getType() {
-	return this->type;
+	return type;
 }
 
-string Student::getId() {
-	return this->index;
+int Student::getId() {
+	return index;
 }
