@@ -8,14 +8,17 @@ using namespace std;
 
 class List
 {
-	vector<Student> students;
-	vector<Employee> employees;
+
+	vector<Person*> school;
 
 public:
-	void addStudent(Student& student);
-	void displayStudent();
-
-	void addEmployee(Employee& employee);
-	void displayEmployee();
+	void addPerson(Person* person);
+	void displayPerson();
+	void pierwsza() {
+		school.front();
+	};
+	void druga() {
+		school.back();
+	};
 };
 

@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <cstdlib>
 #include <conio.h>
+#include <string>
 
 using namespace std;
 
@@ -16,12 +17,13 @@ void ui() {
 	int y;
 
 	while (true) {
-		cout << "MENU" << endl;
+		cout << "=====-MENU-=====" << endl;
 		cout << "1.Dodaj studenta" << endl;
 		cout << "2.Dodaj pracownika" << endl;
-		cout << "3.Wyswietl liste studentow" << endl;
+		cout << "3.Wyswietl liste" << endl;
 		cout << "4.Wyswietl liste pracownikow" << endl;
 		cout << "5.Zakoncz" << endl;
+		cout << "================" << endl;
 		cout << endl;
 		cin >> choice;
 
@@ -43,7 +45,7 @@ void ui() {
 			cout << "Podaj index: ";
 			cin >> y;
 			s.setIndex(y);
-			List.addStudent(s);
+			List.addPerson(&s);
 		}
 		break;
 		case 2:
@@ -55,27 +57,35 @@ void ui() {
 			cout << "Podaj nazwisko: ";
 			cin >> x;
 			w.setSurname(x);
+
 			cout << "Podaj pesel: ";
 			cin >> x;
+			while (x.length() != 11) {
+				cout << "Zly pesel, wprowadz jeszcze raz: ";
+				cin >> x;
+			}
 			w.setPesel(x);
+
 			cout << "Podaj stanowisko: ";
 			cin >> x;
 			w.setPosition(x);
 			cout << "Podaj numer karty: ";
 			cin >> y;
 			w.setCardNumber(y);
+			List.addPerson(&w);
 		}
 			
 		break;
 		case 3:
 		{
-			List.displayStudent();
+			List.pierwsza();
+			List.druga();
 		}
 			
 		break;
 		case 4:
 		{
-			List.displayEmployee();
+			
 		}
 			
 		break;
