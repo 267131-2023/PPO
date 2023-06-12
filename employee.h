@@ -9,7 +9,7 @@ class Employee : public Person
 {
 	int cardNumber;
 	int id = cardNumber;
-	string type = "employee";
+	string type = "pracownik";
 	string position;
 	
 public:

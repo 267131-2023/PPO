@@ -24,7 +24,6 @@ public:
 	void setPesel(string pesel);
 	string getPesel();
 
-	void setAge(string pesel);
 	int getAge();
 
 	virtual string getType();

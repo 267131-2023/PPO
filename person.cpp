@@ -16,25 +16,13 @@ void Person::setPesel(string pesel) {
 	this->pesel = pesel;
 	SYSTEMTIME st;
 	GetSystemTime(&st);
-	if (pesel[2] >= '2') {
-		this->age = st.wYear - (2000 + stoi(pesel.substr(0, 2)));
-	}
-	else {
+	if (pesel[0] != '0') {
 		this->age = st.wYear - (1900 + stoi(pesel.substr(0, 2)));
 	}
+	else {
+		this->age = st.wYear - (2000 + stoi(pesel.substr(0, 2)));
+	}
 }
-//void Person::setAge(string pesel) {
-//	SYSTEMTIME st;
-//	GetSystemTime(&st);
-//	if (pesel[2] >= '2') {
-//		this->age = st.wYear - (2000 + stoi(pesel.substr(0, 2)));
-//		cout << "1";
-//	}
-//	else {
-//		this->age = st.wYear - (1900 + stoi(pesel.substr(0, 2)));
-//		cout << "2";
-//	}
-//}
 
 string Person::getName() {
 	return name;

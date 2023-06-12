@@ -13,12 +13,8 @@ class List
 
 public:
 	void addPerson(Person* person);
-	void displayPerson();
-	void pierwsza() {
-		school.front();
-	};
-	void druga() {
-		school.back();
-	};
+	void displayStudent();
+	void displayEmployee();
+	void saveToFile();
 };
 
